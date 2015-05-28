@@ -17,9 +17,9 @@ How is the sample app structured
 --------------------------------
 The meat of the plugin is provided by a [Scriptable Object](https://developer.mozilla.org/en-US/docs/Interfaces/About_Scriptable_Interfaces) which defines and exposes the functions that are available to javascript.
 
-In the sample plugin, an abstraction layer over the [NPObject API](https://developer.mozilla.org/en/docs/NPObject) has already been implemented with default method implementations that can be overriden as necessary [(nsScriptableObjectBase)](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/nsScriptableObjectBase.cpp).
+In the sample plugin, an abstraction layer over the [NPObject API](https://developer.mozilla.org/en/docs/NPObject) has already been implemented in [nsScriptableObjectBase](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/nsScriptableObjectBase.cpp) with default method implementations that can be overriden as necessary.
 
-nsScriptableObjectBase then serves as the base of the class [(nsScriptableObjectOverwolfSample)](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/nsPluginInstanceOverwolfSample.cpp). It's this class, nsScriptableObjectOverwolfSample that provides the actual "echo" and "add" implementations.
+nsScriptableObjectBase then serves as the base of the class [(nsScriptableObjectOverwolfSample)](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/nsPluginInstanceOverwolfSample.cpp). It's this class, nsScriptableObjectOverwolfSample, that provides the actual "echo" and "add" implementations.
 
 Along with the registration of the javascript methods and the code implementation, nsScriptableObjectOverwolfSample also includes an example of running the code on a new background thread to [prevent blocking on the UI thread](https://msdn.microsoft.com/en-us/magazine/ee309514.aspx).
 
