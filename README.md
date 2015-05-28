@@ -37,7 +37,7 @@ Now that there is a scriptable object with functions that are able to be called 
 
 In the sample app, this happens in the [nsPluginInstanceOverwolfSample](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/nsPluginInstanceOverwolfSample.cpp) class. In the GetValue function, the nsScriptableObjectOverwolfSample is created, initialized, and assigned if it doesn't already exist. ([plugin threading model](https://developer.mozilla.org/en-US/Add-ons/Plugins/Gecko_Plugin_API_Reference/Scripting_plugins#Threading_model))
 
-nsPluginInstanceOverwolfSample includes a note about the upcoming drop of NPAPI support from Chromium, you can read more about this at https://www.chromium.org/developers/npapi-deprecation. I don't believe Overwolf has made any public announcement about their plans, other than the warning in the sample app.
+nsPluginInstanceOverwolfSample includes a [note](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/nsPluginInstanceOverwolfSample.cpp#L36) about the upcoming drop of NPAPI support from Chromium, which you can read more about at https://www.chromium.org/developers/npapi-deprecation. I don't believe Overwolf has made any public announcement about their plans, other than the warning in the sample app.
 
 Registering the Plugin
 ----------------------
