@@ -27,7 +27,7 @@ Along with the registration of the javascript methods and the code implementatio
 
 Mapping Javascript methods to c/c++ methods
 -------------------------------------------
-The scriptable object nsScriptableObjectOverwolfSample includes a map, [methods_](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/nsScriptableObjectOverwolfSample.h#L81), which is used to hold the available public methods, and a [REGISTER_METHOD](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/nsScriptableObjectOverwolfSample.cpp#L8) function that handles adding functions to the map by name.
+The scriptable object nsScriptableObjectOverwolfSample includes a map, [methods_](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/nsScriptableObjectOverwolfSample.h#L81), which is used to hold the available public methods, and a [REGISTER_METHOD](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/nsScriptableObjectOverwolfSample.cpp#L8) function-like macro that handles adding functions to the map by name.
 
 By calling REGISTER_METHOD in the [Init()](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/nsScriptableObjectOverwolfSample.cpp#L28) function, you map the desired javascript method name to the implementation and make it available to be called in javascript.
 
