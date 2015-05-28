@@ -11,7 +11,9 @@ What is the purpose of the XULRunner SDK / Gecko SDK
 
 Using the XULRunner SDK you are able to interact with your c/c++ code through javascript.
 
-You can explore the full API at https://developer.mozilla.org/en-US/Add-ons/Plugins/Gecko_Plugin_API_Reference
+You can explore the full API at https://developer.mozilla.org/en-US/Add-ons/Plugins/Gecko_Plugin_API_Reference.
+
+The [main file](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/main.cpp#L9) notes that the sample app was tested against a specific version of the SDK. Make sure you use the version listed. 
 
 How is the sample app structured
 --------------------------------
@@ -43,6 +45,6 @@ Now that the functions have been registered with the scriptable object and the s
 
 The plugin is created in [NS_NewPluginInstance](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/main.cpp#L79) and destroyed via [NS_DestroyPluginInstance](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/main.cpp#L92).
 
-Now that the plugin is ready to go, there's still another few cleanup steps that are noted in the main file. If you look at the top of the main file, you'll see a mimeType being set. You need to change this to your own type.
+Now that the plugin is ready to go, there's still another few cleanup steps that are noted in the [main file](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/main.cpp#L9). If you look at the top of the main file, you'll see a mimeType being set. You need to change this to your own type.
 
-You also need to go to the [.rc file](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/npOverwolfSamplePlugin.rc) and update the resource info
+You also need to go to the [.rc file](https://github.com/overwolf/overwolf-sample-plugin/blob/master/npOverwolfSamplePlugin/npOverwolfSamplePlugin.rc) and update the resource info.
